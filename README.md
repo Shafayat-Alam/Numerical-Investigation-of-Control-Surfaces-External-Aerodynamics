@@ -10,8 +10,11 @@ Department of Mechanical Engineering, Stony Brook University
 
 ## Executive Summary
 
-![Vehicle Design](image_files/vehicle_design.png)
-*Figure: Sample launch vehicle design - Stony Brook University 2026 Rocket Team*
+<p align="center">
+  <img src="image_files/vehicle_design.png" alt="Vehicle Design" width="800">
+  <br>
+  <em>Figure: Sample launch vehicle design - Stony Brook University 2026 Rocket Team</em>
+</p>
 
 This study compares the aerodynamic performance of two rocket fin geometries at Mach 0.7 using high-fidelity CFD simulation. A blunt-edged baseline fin and a streamlined aerodynamic fin were analyzed using steady-state RANS equations with Spalart-Allmaras turbulence modeling in OpenFOAM v2412.
 
@@ -47,20 +50,29 @@ This study compares the aerodynamic performance of two rocket fin geometries at 
 
 $$c_{\text{MAC}} = \frac{2}{3}\left(c_r + c_t - \frac{c_r c_t}{c_r + c_t}\right)$$
 
-![Fin Geometry](image_files/fin_planform.png)
-*Figure: Trapezoidal fin planform with geometric parameters*
+<p align="center">
+  <img src="image_files/fin_planform.png" alt="Fin Planform" width="600">
+  <br>
+  <em>Figure: Trapezoidal fin planform with geometric parameters</em>
+</p>
 
 ### Two Configurations
 
 **Blunt Fin:** Rectangular cross-section with flat 90° leading and trailing edges
 
-![Blunt Fin Configuration](image_files/blunt_fin.png)
-*Figure: Blunt fin schematic with flat leading and trailing edges*
+<p align="center">
+  <img src="image_files/blunt_fin.png" alt="Blunt Fin" width="700">
+  <br>
+  <em>Figure: Blunt fin schematic with flat leading and trailing edges</em>
+</p>
 
 **Aero Fin:** Curved leading edge with cusped trailing edge for streamlined pressure recovery
 
-![Aero Fin Configuration](image_files/aero_fin.png)
-*Figure: Aero fin schematic with streamlined profile*
+<p align="center">
+  <img src="image_files/aero_fin.png" alt="Aero Fin" width="700">
+  <br>
+  <em>Figure: Aero fin schematic with streamlined profile</em>
+</p>
 
 ---
 
@@ -279,27 +291,48 @@ $$y^+ = \frac{\rho u_\tau y}{\mu}, \quad u_\tau = \sqrt{\frac{\tau_w}{\rho}}$$
 
 **Global Domain (Z = 0.05 m slice):**
 
-| Blunt Fin | Aero Fin |
-|-----------|----------|
-| ![Blunt Global](image_files/blunt_mesh_global.png) | ![Aero Global](image_files/aero_mesh_global.png) |
+<table align="center">
+<tr>
+<td align="center"><b>Blunt Fin</b></td>
+<td align="center"><b>Aero Fin</b></td>
+</tr>
+<tr>
+<td><img src="image_files/blunt_mesh_global.png" alt="Blunt Global Mesh" width="500"></td>
+<td><img src="image_files/aero_mesh_global.png" alt="Aero Global Mesh" width="500"></td>
+</tr>
+</table>
 
-*Figure: Full computational domain showing far-field grading and refinement zones*
+<p align="center"><em>Figure: Full computational domain showing far-field grading and refinement zones</em></p>
 
 **Localized Surface Refinement:**
 
-| Blunt Fin | Aero Fin |
-|-----------|----------|
-| ![Blunt Local](image_files/blunt_mesh_local.png) | ![Aero Local](image_files/aero_mesh_local.png) |
+<table align="center">
+<tr>
+<td align="center"><b>Blunt Fin</b></td>
+<td align="center"><b>Aero Fin</b></td>
+</tr>
+<tr>
+<td><img src="image_files/blunt_mesh_local.png" alt="Blunt Local Mesh" width="500"></td>
+<td><img src="image_files/aero_mesh_local.png" alt="Aero Local Mesh" width="500"></td>
+</tr>
+</table>
 
-*Figure: Near-fin surface refinement capturing wake structure and trailing edge details*
+<p align="center"><em>Figure: Near-fin surface refinement capturing wake structure and trailing edge details</em></p>
 
 **Boundary Layer Inflation:**
 
-| Blunt Fin | Aero Fin |
-|-----------|----------|
-| ![Blunt Zoom](image_files/blunt_mesh_zoom.png) | ![Aero Zoom](image_files/aero_mesh_zoom.png) |
+<table align="center">
+<tr>
+<td align="center"><b>Blunt Fin</b></td>
+<td align="center"><b>Aero Fin</b></td>
+</tr>
+<tr>
+<td><img src="image_files/blunt_mesh_zoom.png" alt="Blunt BL Mesh" width="500"></td>
+<td><img src="image_files/aero_mesh_zoom.png" alt="Aero BL Mesh" width="500"></td>
+</tr>
+</table>
 
-*Figure: Prism layer inflation at wall showing structured boundary layer mesh*
+<p align="center"><em>Figure: Prism layer inflation at wall showing structured boundary layer mesh</em></p>
 
 ---
 
@@ -312,11 +345,17 @@ $$y^+ = \frac{\rho u_\tau y}{\mu}, \quad u_\tau = \sqrt{\frac{\tau_w}{\rho}}$$
 - Final velocity residual: $6.65 \times 10^{-8}$
 - Final pressure residual: $4.78 \times 10^{-5}$
 
-![Aero Fin Residuals](image_files/aero_residuals.png)
-*Figure: Convergence history showing residuals dropping below 10⁻⁶ threshold*
+<p align="center">
+  <img src="image_files/aero_residuals.png" alt="Aero Residuals" width="800">
+  <br>
+  <em>Figure: Convergence history showing residuals dropping below 10⁻⁶ threshold</em>
+</p>
 
-![Aero Fin y+](image_files/aero_yplus.png)
-*Figure: Dimensionless wall distance distribution (area-weighted average: 2.905)*
+<p align="center">
+  <img src="image_files/aero_yplus.png" alt="Aero y+" width="800">
+  <br>
+  <em>Figure: Dimensionless wall distance distribution (area-weighted average: 2.905)</em>
+</p>
 
 **Force Coefficients:**
 
@@ -329,8 +368,11 @@ $$C_D = \frac{D}{q_\infty S}, \quad C_L = \frac{L}{q_\infty S}$$
 
 **Key observation:** Negative viscous lift component indicates adverse pressure gradient on curved surface creates downward-acting shear forces.
 
-![Aero Fin Forces](image_files/aero_forces.png)
-*Figure: Force coefficient evolution showing stable convergence to final values*
+<p align="center">
+  <img src="image_files/aero_forces.png" alt="Aero Forces" width="800">
+  <br>
+  <em>Figure: Force coefficient evolution showing stable convergence to final values</em>
+</p>
 
 ### Blunt Fin Performance
 
@@ -339,11 +381,17 @@ $$C_D = \frac{D}{q_\infty S}, \quad C_L = \frac{L}{q_\infty S}$$
 - Final velocity residual: $1.63 \times 10^{-8}$
 - Final pressure residual: $1.01 \times 10^{-6}$
 
-![Blunt Fin Residuals](image_files/blunt_residuals.png)
-*Figure: Convergence history with faster settling due to simpler geometry*
+<p align="center">
+  <img src="image_files/blunt_residuals.png" alt="Blunt Residuals" width="800">
+  <br>
+  <em>Figure: Convergence history with faster settling due to simpler geometry</em>
+</p>
 
-![Blunt Fin y+](image_files/blunt_yplus.png)
-*Figure: Dimensionless wall distance distribution (area-weighted average: 15.757)*
+<p align="center">
+  <img src="image_files/blunt_yplus.png" alt="Blunt y+" width="800">
+  <br>
+  <em>Figure: Dimensionless wall distance distribution (area-weighted average: 15.757)</em>
+</p>
 
 **Force Coefficients:**
 
@@ -354,8 +402,11 @@ $$C_D = \frac{D}{q_\infty S}, \quad C_L = \frac{L}{q_\infty S}$$
 
 **Key observation:** Both pressure and viscous components contribute constructively to lift.
 
-![Blunt Fin Forces](image_files/blunt_forces.png)
-*Figure: Force coefficient evolution showing asymptotic convergence*
+<p align="center">
+  <img src="image_files/blunt_forces.png" alt="Blunt Forces" width="800">
+  <br>
+  <em>Figure: Force coefficient evolution showing asymptotic convergence</em>
+</p>
 
 ---
 
