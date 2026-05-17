@@ -480,7 +480,7 @@ $$\frac{L}{D} = \frac{C_L}{C_D}$$
 
 ### Flow Field Comparison
 
-The pressure streamline visualization reveals fundamental differences in flow behavior between the two configurations:
+Pressure streamline visualization colored by static pressure reveals fundamental differences in flow behavior:
 
 <table align="center">
 <tr>
@@ -493,21 +493,25 @@ The pressure streamline visualization reveals fundamental differences in flow be
 </tr>
 </table>
 
-<p align="center"><em>Figure: Pressure streamlines showing flow separation and wake structure</em></p>
+<p align="center"><em>Figure: Pressure streamlines (colored by static pressure, Pa) showing flow attachment and wake structure</em></p>
 
 **Key observations:**
 
 **Blunt Fin:**
-- Abrupt flow separation at trailing edge (90° corner)
-- Large low-pressure recirculation zone in wake
-- Wide turbulent wake downstream
-- High base drag from pressure deficit
+- Streamlines remain largely parallel to freestream far from fin
+- Abrupt deflection and recirculation at blunt trailing edge
+- Large low-pressure wake region (blue) downstream of trailing edge
+- Pressure deficit extends several chord lengths downstream
+- Strong adverse pressure gradient at 90° corner drives separation
 
 **Aero Fin:**
-- Gradual pressure recovery along curved trailing edge
-- Minimal flow separation
-- Narrow wake with reduced pressure deficit
-- Streamlines remain attached longer
+- Streamlines smoothly follow curved trailing edge contour
+- Gradual pressure recovery along aft surface (green/yellow gradient)
+- Minimal wake width with higher base pressure
+- Flow remains attached significantly longer
+- Streamlines converge smoothly downstream indicating reduced form drag
+
+The color gradient (pressure scale: 1.0e+00 to 1.3e+05 Pa) clearly shows the blunt fin's large low-pressure recirculation bubble versus the aero fin's successful pressure recovery.
 
 ### Compressibility Effects
 
