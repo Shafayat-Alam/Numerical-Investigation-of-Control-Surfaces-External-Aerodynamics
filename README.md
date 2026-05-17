@@ -478,6 +478,37 @@ $$\frac{L}{D} = \frac{C_L}{C_D}$$
 
 ## Flow Physics Interpretation
 
+### Flow Field Comparison
+
+The pressure streamline visualization reveals fundamental differences in flow behavior between the two configurations:
+
+<table align="center">
+<tr>
+<td align="center"><b>Blunt Fin</b></td>
+<td align="center"><b>Aero Fin</b></td>
+</tr>
+<tr>
+<td><img src="image_files/blunt_streamline.png" alt="Blunt Streamlines" width="500"></td>
+<td><img src="image_files/aero_streamline.png" alt="Aero Streamlines" width="500"></td>
+</tr>
+</table>
+
+<p align="center"><em>Figure: Pressure streamlines showing flow separation and wake structure</em></p>
+
+**Key observations:**
+
+**Blunt Fin:**
+- Abrupt flow separation at trailing edge (90° corner)
+- Large low-pressure recirculation zone in wake
+- Wide turbulent wake downstream
+- High base drag from pressure deficit
+
+**Aero Fin:**
+- Gradual pressure recovery along curved trailing edge
+- Minimal flow separation
+- Narrow wake with reduced pressure deficit
+- Streamlines remain attached longer
+
 ### Compressibility Effects
 
 At leading edge stagnation ($u = 0$), compressible isentropic relation:
