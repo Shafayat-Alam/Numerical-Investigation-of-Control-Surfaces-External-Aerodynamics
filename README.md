@@ -474,13 +474,7 @@ $$\frac{L}{D} = \frac{C_L}{C_D}$$
 - **Control maneuvers (maximize lift):** Blunt fin preferred (166% more lift)
 - **Optimal design:** Mission-dependent; may require variable geometry
 
----
-
-## Flow Physics Interpretation
-
-### Flow Field Visualization
-
-Pressure streamlines showing flow behavior around both fin configurations:
+### Flow Visualization
 
 <table align="center">
 <tr>
@@ -494,46 +488,6 @@ Pressure streamlines showing flow behavior around both fin configurations:
 </table>
 
 <p align="center"><em>Figure: Pressure streamlines colored by static pressure (Pa)</em></p>
-
-### Compressibility Effects
-
-At leading edge stagnation ($u = 0$), compressible isentropic relation:
-
-$$C_{p,\text{stag}} = \frac{2}{\gamma M^2}\left[\left(1 + \frac{\gamma-1}{2}M^2\right)^{\gamma/(\gamma-1)} - 1\right]$$
-
-For $M = 0.7$:
-
-$$C_{p,\text{stag}} = 1.076$$
-
-Incompressible prediction: $C_p = 1.0$
-
-**Result:** 7.6% pressure increase due to compressibility at stagnation point.
-
-### Transonic Pocket Formation
-
-**Critical pressure coefficient** (sonic condition):
-
-$$C_p^* \approx -0.92 \text{ at } M = 0.7$$
-
-If local $C_p < -0.92$, flow becomes locally supersonic.
-
-Sharp leading edge on blunt fin likely creates $C_p \approx -1.5$ → local supersonic pocket forms even at freestream $M = 0.7$.
-
-### Boundary Layer Physics
-
-**Viscous sublayer** ($y^+ < 5$):
-
-$$u^+ = y^+$$
-
-**Log-law layer** ($30 < y^+ < 300$):
-
-$$u^+ = \frac{1}{\kappa}\ln(y^+) + C$$
-
-Where $\kappa = 0.41$, $C \approx 5.0$
-
-**Aero fin:** Resolves viscous sublayer → direct calculation of wall shear stress:
-
-$$\tau_w = \mu\left(\frac{\partial u}{\partial y}\right)_{\text{wall}}$$
 
 ---
 
