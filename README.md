@@ -10,6 +10,9 @@ Department of Mechanical Engineering, Stony Brook University
 
 ## Executive Summary
 
+![Vehicle Design](image_files/vehicle_design.png)
+*Figure: Sample launch vehicle design - Stony Brook University 2026 Rocket Team*
+
 This study compares the aerodynamic performance of two rocket fin geometries at Mach 0.7 using high-fidelity CFD simulation. A blunt-edged baseline fin and a streamlined aerodynamic fin were analyzed using steady-state RANS equations with Spalart-Allmaras turbulence modeling in OpenFOAM v2412.
 
 ### Key Results
@@ -44,15 +47,20 @@ This study compares the aerodynamic performance of two rocket fin geometries at 
 
 $$c_{\text{MAC}} = \frac{2}{3}\left(c_r + c_t - \frac{c_r c_t}{c_r + c_t}\right)$$
 
-![Fin Geometry](images/fin_planform.png)
+![Fin Geometry](image_files/fin_planform.png)
+*Figure: Trapezoidal fin planform with geometric parameters*
 
 ### Two Configurations
 
 **Blunt Fin:** Rectangular cross-section with flat 90° leading and trailing edges
 
+![Blunt Fin Configuration](image_files/blunt_fin.png)
+*Figure: Blunt fin schematic with flat leading and trailing edges*
+
 **Aero Fin:** Curved leading edge with cusped trailing edge for streamlined pressure recovery
 
-![Configuration Comparison](images/fin_configurations.png)
+![Aero Fin Configuration](image_files/aero_fin.png)
+*Figure: Aero fin schematic with streamlined profile*
 
 ---
 
@@ -267,7 +275,31 @@ $$y^+ = \frac{\rho u_\tau y}{\mu}, \quad u_\tau = \sqrt{\frac{\tau_w}{\rho}}$$
 
 **Physical interpretation:** Aero fin achieves direct viscous sublayer resolution ($y^+ < 5$), enabling accurate skin friction calculation without wall functions.
 
-![Mesh Visualization](images/mesh_visualization.png)
+### Mesh Visualization
+
+**Global Domain (Z = 0.05 m slice):**
+
+| Blunt Fin | Aero Fin |
+|-----------|----------|
+| ![Blunt Global](image_files/blunt_mesh_global.png) | ![Aero Global](image_files/aero_mesh_global.png) |
+
+*Figure: Full computational domain showing far-field grading and refinement zones*
+
+**Localized Surface Refinement:**
+
+| Blunt Fin | Aero Fin |
+|-----------|----------|
+| ![Blunt Local](image_files/blunt_mesh_local.png) | ![Aero Local](image_files/aero_mesh_local.png) |
+
+*Figure: Near-fin surface refinement capturing wake structure and trailing edge details*
+
+**Boundary Layer Inflation:**
+
+| Blunt Fin | Aero Fin |
+|-----------|----------|
+| ![Blunt Zoom](image_files/blunt_mesh_zoom.png) | ![Aero Zoom](image_files/aero_mesh_zoom.png) |
+
+*Figure: Prism layer inflation at wall showing structured boundary layer mesh*
 
 ---
 
@@ -280,7 +312,11 @@ $$y^+ = \frac{\rho u_\tau y}{\mu}, \quad u_\tau = \sqrt{\frac{\tau_w}{\rho}}$$
 - Final velocity residual: $6.65 \times 10^{-8}$
 - Final pressure residual: $4.78 \times 10^{-5}$
 
-![Aero Fin Residuals](images/aero_residuals.png)
+![Aero Fin Residuals](image_files/aero_residuals.png)
+*Figure: Convergence history showing residuals dropping below 10⁻⁶ threshold*
+
+![Aero Fin y+](image_files/aero_yplus.png)
+*Figure: Dimensionless wall distance distribution (area-weighted average: 2.905)*
 
 **Force Coefficients:**
 
@@ -293,7 +329,8 @@ $$C_D = \frac{D}{q_\infty S}, \quad C_L = \frac{L}{q_\infty S}$$
 
 **Key observation:** Negative viscous lift component indicates adverse pressure gradient on curved surface creates downward-acting shear forces.
 
-![Aero Fin Forces](images/aero_forces.png)
+![Aero Fin Forces](image_files/aero_forces.png)
+*Figure: Force coefficient evolution showing stable convergence to final values*
 
 ### Blunt Fin Performance
 
@@ -302,7 +339,11 @@ $$C_D = \frac{D}{q_\infty S}, \quad C_L = \frac{L}{q_\infty S}$$
 - Final velocity residual: $1.63 \times 10^{-8}$
 - Final pressure residual: $1.01 \times 10^{-6}$
 
-![Blunt Fin Residuals](images/blunt_residuals.png)
+![Blunt Fin Residuals](image_files/blunt_residuals.png)
+*Figure: Convergence history with faster settling due to simpler geometry*
+
+![Blunt Fin y+](image_files/blunt_yplus.png)
+*Figure: Dimensionless wall distance distribution (area-weighted average: 15.757)*
 
 **Force Coefficients:**
 
@@ -313,7 +354,8 @@ $$C_D = \frac{D}{q_\infty S}, \quad C_L = \frac{L}{q_\infty S}$$
 
 **Key observation:** Both pressure and viscous components contribute constructively to lift.
 
-![Blunt Fin Forces](images/blunt_forces.png)
+![Blunt Fin Forces](image_files/blunt_forces.png)
+*Figure: Force coefficient evolution showing asymptotic convergence*
 
 ---
 
